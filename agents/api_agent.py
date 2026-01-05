@@ -6,6 +6,7 @@ from tools.weather import get_weather
 from .multi_tools import llm
 from prompts import system_prompt
 
+#created an agent to fetch live weather data 
 api_agent = create_agent(
     model=llm,
     tools=[get_weather],
