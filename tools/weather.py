@@ -13,7 +13,18 @@ WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
 @tool
 def get_weather(city: str) -> dict:
     """
-    Fetches live weather data for a city.
+    Summary:
+        Fetch live weather information for a specified city using the OpenWeatherMap API.
+
+    Args:
+        city (str): Name of the city for which weather data is requested.
+
+    Returns:
+        dict: A dictionary containing:
+            - temperature (float): Current temperature in Celsius.
+            - condition (str): Text description of the current weather.
+        If an error occurs, returns a dictionary with:
+            - error (str): Error message describing the failure.
     """
     try:
         url = (

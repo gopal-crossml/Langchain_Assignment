@@ -11,7 +11,15 @@ from langchain.tools import tool
 @tool
 def future_date(days: int) -> str:
     """
-    Returns date after N days from today.
+    Summary:
+        Calculate a future date by adding a given number of days to today's date.
+
+    Args:
+        days (int): Number of days to add to the current date.
+
+    Returns:
+        str: The calculated future date in "YYYY-MM-DD" format,
+        or an error message if the calculation fails.
     """
     try:
         target_date = datetime.today() + timedelta(days=days)

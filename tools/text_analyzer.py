@@ -9,13 +9,19 @@ from langchain.tools import tool
 @tool
 def analyze_text(text: str) -> dict:
     """
-    Analyzes text.
+summary:
+    This function computes the number of words, number of characters,
+    and performs a simple rule-based sentiment analysis based on the
+    presence of predefined positive and negative words.
 
-    Output:
-        - word_count
-        - character_count
-        - sentiment
-    """
+Args:
+    text (str): The input text to be analyzed.
+
+Returns:
+    dict: A dictionary containing:
+        - word_count (int): Total number of words in the text.
+        - sentiment (str): Sentiment classification of the text.
+"""
     try:
         words = text.split()
         char_count = len(text)
