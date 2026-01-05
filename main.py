@@ -20,9 +20,9 @@ if __name__ =="__main__":
     print(date_result["messages"][-1].content)
    
 
-    # shipping_result = multi_agent.invoke({"messages": [{"role": "user", "content": "Calculate the total cost if I buy 3 items priced at 499 each,and tell me the delivery date if shipping takes 7 days."}]})
-    # print("\n--- Multi Tool Example ---")
-    # print(shipping_result["messages"][-1].content)
+    shipping_result = multi_agent.invoke({"messages": [{"role": "user", "content": "Calculate the total cost if I buy 3 items priced at 499 each,and tell me the delivery date if shipping takes 7 days."}]})
+    print("\n--- Multi Tool Example ---")
+    print(shipping_result["messages"][-1].content)
 
     api_result = api_agent.invoke({"messages": [{"role": "user", "content": "How is the weather in Chennai?"}]})
     print("\n--API example--")
